@@ -2,12 +2,34 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Cat Energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="header">
+      <a class="header__logo" href="index.html" aria-current="page">
+        <img class="header__logo-icon" src="#" width="33" height="38" alt="Логотип компании.">
+        <img class="header__logo-text" src="#" width="101" height="18" alt="Кэт Энерджи.">
+      </a>
+      <nav class="nav">
+        <button class="nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+        <ul class="nav__list menu-list">
+          <li class="menu-list__item">
+            <a class="menu-list__link menu-list__link--current" href="index.html" aria-current="page">Главная</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    
   </body>
 </html>
