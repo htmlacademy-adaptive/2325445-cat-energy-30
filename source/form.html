@@ -31,7 +31,96 @@
       </nav>
     </header>
     <main class="main-container">
-
+      <section class="plan">
+        <h1 class="plan__title">Подбор программы</h1>
+        <p class="plan__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <form class="plan__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="plan__group">
+            <legend class="visually-hidden">Данные питомца.</legend>
+            <label class="plan__label">
+              <span class="plan__label-text">ИМЯ:*</span>
+              <input class="plan__input input-field" type="text" name="pet-name" id="pet-name" placeholder="Барсик" required>
+            </label>
+            <label class="plan__label">
+              <span class="plan__label-text">Вес (кг):*</span>
+              <input class="plan__input input-field" type="number" name="pet-weight" id="pet-weight" placeholder="7" required>
+            </label>
+            <label class="plan__label">
+              <span class="plan__label-text">Возраст (лет):</span>
+              <input class="plan__input input-field" type="number" name="pet-age" id="pet-age" placeholder="7">
+            </label>
+          </fieldset>
+          <fieldset class="plan__group">
+            <legend class="visually-hidden">Тип программы.</legend>
+            <ul class="plan__list">
+              <li class="plan__item">
+                <label class="plan__control control">
+                  <input class="control__input" type="radio" name="diet-plan" value="Похудение" checked>
+                  <span class="control__label">Похудение</span>
+                </label>
+              </li>
+              <li class="plan__item">
+                <label class="plan__control control">
+                  <input class="control__input" type="radio" name="diet-plan" value="Набор массы">
+                  <span class="control__label">Набор массы</span>
+                </label>
+              </li>
+              <li class="plan__item">
+                <label class="plan__control control">
+                  <input class="control__input" type="radio" name="diet-plan" value="Не знаю (Нужен ваш совет)">
+                  <span class="control__label">Не знаю (Нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="plan__group">
+            <legend class="plan__group-title">Контактные данные (владельца кота)</legend>
+            <label class="plan__label">
+              <span class="plan__label-text">E-mail:*</span>
+              <input class="plan__input plan__input--mail input-field" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
+            </label>
+            <label class="plan__label">
+              <span class="plan__label-text">Телефон:*</span>
+              <input class="plan__input plan__input--phone input-field" type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
+            </label>
+          </fieldset>
+          <fieldset class="plan__group">
+            <legend class="plan__group-title">Комментарий</legend>
+            <textarea class="plan__textarea" name="owner-comments" id="owner-comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <fieldset class="plan__group">
+            <legend class="plan__group-title">Дополнительно</legend>
+            <ul class="plan__list">
+              <li class="plan__item">
+                <label class="plan__control control">
+                  <input class="control__input" type="checkbox" name="extra-sweetener" checked>
+                  <span class="control__label">Сахарозаменитель</span>
+                </label>
+              </li>
+              <li class="plan__item">
+                <label class="plan__control control">
+                  <input class="control__input" type="checkbox" name="extra-water">
+                  <span class="control__label">Питьевая вода</span>
+                </label>
+              </li>
+              <li class="plan__item">
+                <label class="plan__control control">
+                  <input class="control__input" type="checkbox" name="extra-milk">
+                  <span class="control__label">Молоко</span>
+                </label>
+              </li>
+              <li class="plan__item">
+                <label class="plan__control control">
+                  <input class="control__input" type="checkbox" name="extra-vitamins">
+                  <span class="control__label">Витамины</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="plan__button button button--primary" type="submit">Отправить заявку</button>
+          <span class="plan__notice">* — Обязательные поля</span>
+        </form>
+      </section>
       <section class="location">
         <h2 class="visually-hidden">Где нас найти.</h2>
         <p class="location__title">Приглашаем к сотрудничеству дилеров!</p>
