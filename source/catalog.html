@@ -10,8 +10,16 @@
   <body class="page__body">
     <header class="header">
       <a class="header__logo" href="index.html">
-        <img class="header__logo-icon" src="#" width="33" height="38" alt="Логотип компании.">
-        <img class="header__logo-text" src="#" width="101" height="18" alt="Кэт Энерджи.">
+        <picture>
+          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-icon-desktop.svg">
+          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-icon-tablet.svg">
+          <img class="header__logo-icon" src="images/logo-icon-mobile.svg" width="33" height="38" alt="Логотип компании.">
+        </picture>
+        <picture>
+          <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg">
+          <source width="101" height="18" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-text-tablet.svg">
+          <img class="header__logo-text" src="images/logo-text-mobile.svg" width="101" height="18" alt="Кэт Энерджи.">
+        </picture>
       </a>
       <nav class="nav">
         <button class="nav__toggle" type="button">
@@ -37,7 +45,10 @@
         <ul class="products__list">
           <li class="products__item product-card">
             <div class="product-card__img">
-              <img src="#" width="140" height="107" alt="Корм для котов Кэт Энерджи Про со вкусом курицы, 500 грамм.">
+              <picture>
+                <source width="161" height="172" type="image/png" media="(min-width: 768px)" srcset="images/pro-chicken-500-tablet@1x.png 1x, images/pro-chicken-500-tablet@1x.png 2x">
+                <img src="images/pro-chicken-500-mobile@1x.png" srcset="images/pro-chicken-500-mobile@2x.png 2x" width="68" height="86" alt="Корм для котов Кэт Энерджи Про со вкусом курицы, 500 грамм.">
+              </picture>
             </div>
             <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
             <dl class="product-card__stats">
@@ -58,7 +69,10 @@
           </li>
           <li class="products__item product-card">
             <div class="product-card__img">
-              <img src="#" width="140" height="107" alt="Корм для котов Кэт Энерджи Про со вкусом курицы, 1000 грамм.">
+              <picture>
+                <source width="168" height="206" type="image/png" media="(min-width: 768px)" srcset="images/pro-chicken-1000-tablet@1x.png 1x, images/pro-chicken-1000-tablet@2x.png 2x">
+                <img src="images/pro-chicken-1000-mobile@1x.png" srcset="images/pro-chicken-1000-mobile@2x.png 2x" width="84" height="100" alt="Корм для котов Кэт Энерджи Про со вкусом курицы, 1000 грамм.">
+              </picture>
             </div>
             <h3 class="product-card__title">Cat Energy PRO 1000 г</h3>
             <dl class="product-card__stats">
@@ -79,7 +93,10 @@
           </li>
           <li class="products__item product-card">
             <div class="product-card__img">
-              <img src="#" width="140" height="107" alt="Корм для котов Кэт Энерджи Про со вкусом рыбы, 500 грамм.">
+              <picture>
+                <source width="163" height="174" type="image/png" media="(min-width: 768px)" srcset="images/pro-fish-500-tablet@1x.png 1x, images/pro-fish-500-tablet@2x.png 2x">
+                <img src="images/pro-fish-500-mobile@1x.png" srcset="images/pro-fish-500-mobile@2x.png 2x" width="68" height="78" alt="Корм для котов Кэт Энерджи Про со вкусом рыбы, 500 грамм.">
+              </picture>
             </div>
             <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
             <dl class="product-card__stats">
@@ -100,7 +117,10 @@
           </li>
           <li class="products__item product-card">
             <div class="product-card__img">
-              <img src="#" width="140" height="107" alt="Корм для котов Кэт Энерджи Про со вкусом рыбы, 1000 грамм.">
+              <picture>
+                <source width="168" height="200" type="image/png" media="(min-width: 768px)" srcset="images/pro-fish-1000-tablet@1x.png 1x, images/pro-fish-1000-tablet@2x.png 2x">
+                <img src="images/pro-fish-1000-mobile@1x.png" srcset="images/pro-fish-1000-mobile@2x.png 2x" width="84" height="100" alt="Корм для котов Кэт Энерджи Про со вкусом рыбы, 1000 грамм.">
+              </picture>
             </div>
             <h3 class="product-card__title">Cat Energy PRO 1000 г</h3>
             <dl class="product-card__stats">
@@ -121,7 +141,10 @@
           </li>
           <li class="products__item product-card">
             <div class="product-card__img">
-              <img src="#" width="140" height="107" alt="Корм для котов Кэт Энерджи Слим со вкусом гречки, 500 грамм.">
+              <picture>
+                <source width="161" height="171" type="image/png" media="(min-width: 768px)" srcset="images/slim-buckwheat-500-tablet@1x.png 1x, images/slim-buckwheat-500-tablet@2x.png 2x">
+                <img src="images/slim-buckwheat-500-mobile@1x.png" srcset="images/slim-buckwheat-500-mobile@2x.png 2x" width="68" height="78" alt="Корм для котов Кэт Энерджи Слим со вкусом гречки, 500 грамм.">
+              </picture>
             </div>
             <h3 class="product-card__title">Cat Energy SLIM 500 г</h3>
             <dl class="product-card__stats">
@@ -142,7 +165,10 @@
           </li>
           <li class="products__item product-card">
             <div class="product-card__img">
-              <img src="#" width="140" height="107" alt="Корм для котов Кэт Энерджи Слим со вкусом гречки, 1000 грамм.">
+              <picture>
+                <source width="169" height="200" type="image/png" media="(min-width: 768px)" srcset="images/slim-buckwheat-1000-tablet@1x.png 1x, images/slim-buckwheat-1000-tablet@2x.png 2x">
+                <img src="images/slim-buckwheat-1000-mobile@1x.png" srcset="images/slim-buckwheat-1000-mobile@2x.png 2x" width="84" height="100" alt="Корм для котов Кэт Энерджи Слим со вкусом гречки, 1000 грамм.">
+              </picture>
             </div>
             <h3 class="product-card__title">Cat Energy SLIM 1000 г</h3>
             <dl class="product-card__stats">
@@ -163,7 +189,10 @@
           </li>
           <li class="products__item product-card">
             <div class="product-card__img">
-              <img src="#" width="140" height="107" alt="Корм для котов Кэт Энерджи Слим со вкусом риса, 500 грамм.">
+              <picture>
+                <source width="163" height="174" type="image/png" media="(min-width: 768px)" srcset="images/slim-rice-500-tablet@1x.png 1x, images/slim-rice-500-tablet@2x.png 2x">
+                <img src="images/slim-rice-500-mobile@1x.png" srcset="images/slim-rice-500-mobile@2x.png 2x" width="72" height="84" alt="Корм для котов Кэт Энерджи Слим со вкусом риса, 500 грамм.">
+              </picture>
             </div>
             <h3 class="product-card__title">Cat Energy SLIM 500 г</h3>
             <dl class="product-card__stats">
@@ -247,7 +276,7 @@
     </main>
     <footer class="footer">
       <a class="footer__logo" href="index.html">
-        <img src="#" width="128" height="24" alt="Логотип компании - Кэт Энерджи.">
+        <img src="images/footer-logo.svg" width="128" height="24" alt="Логотип компании - Кэт Энерджи.">
       </a>
       <section class="socials">
         <h2 class="visually-hidden">Мы в социальных сетях.</h2>
@@ -269,7 +298,7 @@
         <h2 class="visually-hidden">Авторы сайта.</h2>
         <a class="madeby__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a class="madeby__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="#" width="27" height="34" alt="Логотип HTML Academy.">
+          <img src="images/academy-logo.svg" width="27" height="34" alt="Логотип HTML Academy.">
         </a>
       </section>
     </footer>

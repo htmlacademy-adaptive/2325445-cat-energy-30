@@ -10,8 +10,16 @@
   <body class="page__body">
     <header class="header">
       <a class="header__logo" href="index.html">
-        <img class="header__logo-icon" src="#" width="33" height="38" alt="Логотип компании.">
-        <img class="header__logo-text" src="#" width="101" height="18" alt="Кэт Энерджи.">
+        <picture>
+          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-icon-desktop.svg">
+          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-icon-tablet.svg">
+          <img class="header__logo-icon" src="images/logo-icon-mobile.svg" width="33" height="38" alt="Логотип компании.">
+        </picture>
+        <picture>
+          <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg">
+          <source width="101" height="18" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-text-tablet.svg">
+          <img class="header__logo-text" src="images/logo-text-mobile.svg" width="101" height="18" alt="Кэт Энерджи.">
+        </picture>
       </a>
       <nav class="nav">
         <button class="nav__toggle" type="button">
@@ -139,7 +147,7 @@
     </main>
     <footer class="footer">
       <a class="footer__logo" href="index.html">
-        <img src="#" width="128" height="24" alt="Логотип компании - Кэт Энерджи.">
+        <img src="images/footer-logo.svg" width="128" height="24" alt="Логотип компании - Кэт Энерджи.">
       </a>
       <section class="socials">
         <h2 class="visually-hidden">Мы в социальных сетях.</h2>
@@ -161,7 +169,7 @@
         <h2 class="visually-hidden">Авторы сайта.</h2>
         <a class="madeby__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a class="madeby__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="#" width="27" height="34" alt="Логотип HTML Academy.">
+          <img src="images/academy-logo.svg" width="27" height="34" alt="Логотип HTML Academy.">
         </a>
       </section>
     </footer>
