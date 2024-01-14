@@ -1,0 +1,20 @@
+.promo {
+  font-family: $secondary-font;
+  color: $text-color-contrast;
+  background-image: linear-gradient(180deg, $main-color 0%, $main-color 50%, transparent 50%);
+}
+
+.promo__title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+}
+
+.promo__subtitle {
+  margin: 0;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+}

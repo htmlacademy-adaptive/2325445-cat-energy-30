@@ -52,15 +52,15 @@
             <legend class="visually-hidden">Данные питомца.</legend>
             <label class="plan__label">
               <span class="plan__label-text">ИМЯ:*</span>
-              <input class="plan__input input-field" type="text" name="pet-name" id="pet-name" placeholder="Барсик" required>
+              <input class="plan__input" type="text" name="pet-name" id="pet-name" placeholder="Барсик" required>
             </label>
             <label class="plan__label">
               <span class="plan__label-text">Вес (кг):*</span>
-              <input class="plan__input input-field" type="number" name="pet-weight" id="pet-weight" placeholder="7" required>
+              <input class="plan__input" type="number" name="pet-weight" id="pet-weight" placeholder="7" required>
             </label>
             <label class="plan__label">
               <span class="plan__label-text">Возраст (лет):</span>
-              <input class="plan__input input-field" type="number" name="pet-age" id="pet-age" placeholder="7">
+              <input class="plan__input" type="number" name="pet-age" id="pet-age" placeholder="7">
             </label>
           </fieldset>
           <fieldset class="plan__group">
@@ -90,16 +90,16 @@
             <legend class="plan__group-title">Контактные данные (владельца кота)</legend>
             <label class="plan__label">
               <span class="plan__label-text">E-mail:*</span>
-              <input class="plan__input plan__input--mail input-field" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
+              <input class="plan__input plan__input--mail" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
             </label>
             <label class="plan__label">
               <span class="plan__label-text">Телефон:*</span>
-              <input class="plan__input plan__input--phone input-field" type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
+              <input class="plan__input plan__input--phone" type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
             </label>
           </fieldset>
           <fieldset class="plan__group">
             <legend class="plan__group-title">Комментарий</legend>
-            <textarea class="plan__textarea" name="owner-comments" id="owner-comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="plan__input plan__input--textarea" name="owner-comments" id="owner-comments" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="plan__group">
             <legend class="plan__group-title">Дополнительно</legend>
@@ -134,7 +134,7 @@
           <span class="plan__notice">* — Обязательные поля</span>
         </form>
       </section>
-      <section class="location">
+      <section class="location location--inner-page">
         <h2 class="visually-hidden">Где нас найти.</h2>
         <p class="location__title">Приглашаем к сотрудничеству дилеров!</p>
         <address class="location__address">

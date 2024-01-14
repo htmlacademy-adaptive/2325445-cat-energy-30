@@ -1,0 +1,23 @@
+.location {
+  &--inner-page {
+    background-color: $bg-color-basic;
+  }
+}
+
+.location__title {
+  margin: 0;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.location__address {
+  line-height: 20px;
+  font-style: normal;
+
+  p {
+    margin: 0;
+  }
+}

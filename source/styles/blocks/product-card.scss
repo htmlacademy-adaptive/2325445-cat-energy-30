@@ -1,0 +1,24 @@
+.product-card__title {
+  margin: 0;
+  font-family: $secondary-font;
+  line-height: 20px;
+  color: $text-color-special;
+  text-transform: uppercase;
+}
+
+.product-card__stats {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product-card__stats-item {
+  dd {
+    margin: 0;
+  }
+}
+
+.product-card__text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+}

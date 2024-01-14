@@ -1,0 +1,16 @@
+.extra-card__title {
+  font-family: $secondary-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: $text-color-special;
+  text-transform: uppercase;
+}
+
+.extra-card__stats {
+  line-height: 14px;
+
+  dd {
+    margin: 0;
+  }
+}

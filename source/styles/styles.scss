@@ -1,7 +1,8 @@
 /* GLOBAL */
 @import "./global/variables.scss";
-@import "./global/global.scss";
+@import "./global/mixins.scss";
 @import "./global/fonts.scss";
+@import "./global/global.scss";
 @import "./global/common.scss";
 @import "./global/visually-hidden.scss";
 
@@ -26,5 +27,4 @@
 @import "./blocks/extras.scss";
 @import "./blocks/extra-card.scss";
 @import "./blocks/plan.scss";
-@import "./blocks/input-field.scss";
 @import "./blocks/control.scss";
