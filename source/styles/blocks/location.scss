@@ -1,6 +1,8 @@
 .location {
+  background-color: $bg-color-primary;
+
   &--inner-page {
-    background-color: $bg-color-basic;
+    background-color: $bg-color-secondary;
   }
 }
 
@@ -9,7 +11,7 @@
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 20px;
-  color: #111111;
+  color: $text-color-special;
   text-transform: uppercase;
 }
 

@@ -1,5 +1,5 @@
 .demo {
-  background-color: $bg-color-extra;
+  background-color: $bg-color-secondary;
 }
 
 .demo__title {
@@ -8,7 +8,7 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
-  color: $text-color-extra;
+  color: $text-color-secondary;
 }
 
 .demo__desc {
@@ -30,7 +30,7 @@
   font-family: $secondary-font;
   font-size: 24px;
   line-height: 24px;
-  color: $text-color-extra;
+  color: $text-color-secondary;
   text-transform: uppercase;
 }
 

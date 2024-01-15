@@ -4,13 +4,13 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
-  color: $text-color-extra;
+  color: $text-color-secondary;
 }
 
 .plan__text {
   margin: 0;
   font-family: $secondary-font;
-  color: $text-color-extra;
+  color: $text-color-secondary;
   text-transform: uppercase;
 }
 
@@ -31,9 +31,9 @@
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 18px;
-  color: $text-color;
+  color: $text-color-primary;
   text-transform: uppercase;
-  border: 1px solid #e7e7e7;
+  border: 1px solid $border-color-primary;
 }
 
 .plan__list {
@@ -55,5 +55,5 @@
 .plan__notice {
   font-size: 14px;
   line-height: 16px;
-  color: $text-color-extra;
+  color: $text-color-secondary;
 }

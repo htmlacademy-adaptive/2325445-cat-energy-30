@@ -13,7 +13,7 @@
   cursor: pointer;
 
   &--secondary {
-    color: $text-color;
-    background-color: $bg-color-basic;
+    color: $text-color-primary;
+    background-color: $bg-color-secondary;
   }
 }
