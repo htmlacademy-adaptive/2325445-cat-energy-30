@@ -6,12 +6,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
+    <!-- favicons -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="header">
       <a class="header__logo" href="index.html">
-        <img class="header__logo-icon" src="#" width="33" height="38" alt="Логотип компании.">
-        <img class="header__logo-text" src="#" width="101" height="18" alt="Кэт Энерджи.">
+        <picture>
+          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-icon-desktop.svg">
+          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-icon-tablet.svg">
+          <img class="header__logo-icon" src="images/logo-icon-mobile.svg" width="33" height="38" alt="Логотип компании.">
+        </picture>
+        <picture>
+          <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg">
+          <source width="101" height="18" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-text-tablet.svg">
+          <img class="header__logo-text" src="images/logo-text-mobile.svg" width="101" height="18" alt="Кэт Энерджи.">
+        </picture>
       </a>
       <nav class="nav">
         <button class="nav__toggle" type="button">
@@ -32,22 +45,22 @@
     </header>
     <main class="main-container">
       <section class="plan">
-        <h1 class="plan__title">Подбор программы</h1>
+        <h1 class="plan__title section-title">Подбор программы</h1>
         <p class="plan__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="plan__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="plan__group">
             <legend class="visually-hidden">Данные питомца.</legend>
             <label class="plan__label">
               <span class="plan__label-text">ИМЯ:*</span>
-              <input class="plan__input input-field" type="text" name="pet-name" id="pet-name" placeholder="Барсик" required>
+              <input class="plan__input" type="text" name="pet-name" id="pet-name" placeholder="Барсик" required>
             </label>
             <label class="plan__label">
               <span class="plan__label-text">Вес (кг):*</span>
-              <input class="plan__input input-field" type="number" name="pet-weight" id="pet-weight" placeholder="7" required>
+              <input class="plan__input" type="number" name="pet-weight" id="pet-weight" placeholder="7" required>
             </label>
             <label class="plan__label">
               <span class="plan__label-text">Возраст (лет):</span>
-              <input class="plan__input input-field" type="number" name="pet-age" id="pet-age" placeholder="7">
+              <input class="plan__input" type="number" name="pet-age" id="pet-age" placeholder="7">
             </label>
           </fieldset>
           <fieldset class="plan__group">
@@ -77,16 +90,16 @@
             <legend class="plan__group-title">Контактные данные (владельца кота)</legend>
             <label class="plan__label">
               <span class="plan__label-text">E-mail:*</span>
-              <input class="plan__input plan__input--mail input-field" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
+              <input class="plan__input plan__input--mail" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
             </label>
             <label class="plan__label">
               <span class="plan__label-text">Телефон:*</span>
-              <input class="plan__input plan__input--phone input-field" type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
+              <input class="plan__input plan__input--phone" type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
             </label>
           </fieldset>
           <fieldset class="plan__group">
             <legend class="plan__group-title">Комментарий</legend>
-            <textarea class="plan__textarea" name="owner-comments" id="owner-comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="plan__input plan__input--textarea" name="owner-comments" id="owner-comments" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="plan__group">
             <legend class="plan__group-title">Дополнительно</legend>
@@ -121,7 +134,7 @@
           <span class="plan__notice">* — Обязательные поля</span>
         </form>
       </section>
-      <section class="location">
+      <section class="location location--inner-page">
         <h2 class="visually-hidden">Где нас найти.</h2>
         <p class="location__title">Приглашаем к сотрудничеству дилеров!</p>
         <address class="location__address">
@@ -139,7 +152,7 @@
     </main>
     <footer class="footer">
       <a class="footer__logo" href="index.html">
-        <img src="#" width="128" height="24" alt="Логотип компании - Кэт Энерджи.">
+        <img src="images/footer-logo.svg" width="128" height="24" alt="Логотип компании - Кэт Энерджи.">
       </a>
       <section class="socials">
         <h2 class="visually-hidden">Мы в социальных сетях.</h2>
@@ -157,11 +170,11 @@
           </li>
         </ul>
       </section>
-      <section class="madeby">
+      <section class="made-by">
         <h2 class="visually-hidden">Авторы сайта.</h2>
-        <a class="madeby__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="madeby__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="#" width="27" height="34" alt="Логотип HTML Academy.">
+        <a class="made-by__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="made-by__logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="images/academy-logo.svg" width="27" height="34" alt="Логотип HTML Academy.">
         </a>
       </section>
     </footer>

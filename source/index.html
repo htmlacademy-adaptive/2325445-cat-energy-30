@@ -6,12 +6,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
+    <!-- favicons -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="header">
       <a class="header__logo" href="index.html" aria-current="page">
-        <img class="header__logo-icon" src="#" width="33" height="38" alt="Логотип компании.">
-        <img class="header__logo-text" src="#" width="101" height="18" alt="Кэт Энерджи.">
+        <picture>
+          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-icon-desktop.svg">
+          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-icon-tablet.svg">
+          <img class="header__logo-icon" src="images/logo-icon-mobile.svg" width="33" height="38" alt="Логотип компании.">
+        </picture>
+        <picture>
+          <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg">
+          <source width="101" height="18" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-text-tablet.svg">
+          <img class="header__logo-text" src="images/logo-text-mobile.svg" width="101" height="18" alt="Кэт Энерджи.">
+        </picture>
       </a>
       <nav class="nav">
         <button class="nav__toggle" type="button">
@@ -35,10 +48,14 @@
       <section class="promo">
         <h2 class="promo__title section-title">Функциональное питание для котов</h2>
         <p class="promo__subtitle">Занялся собой? Займись котом!</p>
-        <a class="promo__button button button--primary" href="form.html">Подобрать программу</a>
         <div class="promo__img">
-          <img src="#" width="280" height="270" alt="Корм для котов Кэт Энерджи Про со вкусом курицы.">
+          <picture>
+            <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/promo-product-desktop@1x.png 1x, images/promo-product-desktop@2x.png 2x">
+            <source width="709" height="609" type="image/jpg" media="(min-width: 768px)" srcset="images/promo-product-tablet@1x.jpg 1x, images/promo-product-tablet@2x.jpg 2x">
+            <img src="images/promo-product-mobile@1x.png" srcset="images/promo-product-mobile@2x.png 2x" width="280" height="270" alt="Корм для котов Кэт Энерджи Про со вкусом курицы.">
+          </picture>
         </div>
+        <a class="promo__button button button--primary" href="form.html">Подобрать программу</a>
       </section>
       <section class="programs">
         <h2 class="visually-hidden">Программы питания.</h2>
@@ -88,8 +105,14 @@
         <span class="demo__price">Затраты на питание: 15 000 руб.</span>
         <div class="demo__slider demo-slider">
           <div class="demo-slider__images">
-            <img class="demo-slider__image demo-slider__image--fat" src="#" width="280" height="256" alt="Толстый серо-белый кот с разным цветом глаз -  желтым и зеленым.">
-            <img class="demo-slider__image demo-slider__image--slim" src="#" width="280" height="256" alt="Худой серо-белый кот с разным цветом глаз -  желтым и зеленым.">
+            <picture>
+              <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x">
+              <img class="demo-slider__image demo-slider__image--before" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Толстый серо-белый кот с разным цветом глаз - желтым и зеленым.">
+            </picture>
+            <picture>
+              <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x">
+              <img class="demo-slider__image demo-slider__image--after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Худой серо-белый кот с разным цветом глаз - желтым и зеленым.">
+            </picture>
           </div>
           <button class="demo-slider__control" type="button">
             <span class="visually-hidden">Ползунок. Кот до и после.</span>
@@ -114,7 +137,7 @@
     </main>
     <footer class="footer">
       <a class="footer__logo" href="index.html" aria-current="page">
-        <img src="#" width="128" height="24" alt="Логотип компании - Кэт Энерджи.">
+        <img src="images/footer-logo.svg" width="128" height="24" alt="Логотип компании - Кэт Энерджи.">
       </a>
       <section class="socials">
         <h2 class="visually-hidden">Мы в социальных сетях.</h2>
@@ -132,11 +155,11 @@
           </li>
         </ul>
       </section>
-      <section class="madeby">
+      <section class="made-by">
         <h2 class="visually-hidden">Авторы сайта.</h2>
-        <a class="madeby__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="madeby__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="#" width="27" height="34" alt="Логотип HTML Academy.">
+        <a class="made-by__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="made-by__logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="images/academy-logo.svg" width="27" height="34" alt="Логотип HTML Academy.">
         </a>
       </section>
     </footer>

@@ -1,0 +1,7 @@
+.products__title {
+  color: $text-color-secondary;
+}
+
+.products__list {
+  @include list-reset;
+}

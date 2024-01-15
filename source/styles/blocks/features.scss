@@ -1,0 +1,13 @@
+.features__title {
+  line-height: 40px;
+  color: $text-color-secondary;
+}
+
+.features__list {
+  @include list-reset;
+}
+
+.features__desc {
+  margin: 0;
+}
+

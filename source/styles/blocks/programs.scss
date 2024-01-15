@@ -1,0 +1,31 @@
+.programs__list {
+  @include list-reset;
+}
+
+.programs__item {
+  background-color: $bg-color-secondary;
+}
+
+.programs__title {
+  margin: 0;
+  font-family: $secondary-font;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  color: $text-color-secondary;
+  text-transform: uppercase;
+}
+
+.programs__desc {
+  margin: 0;
+}
+
+.programs__link {
+  font-family: $secondary-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: $text-color-secondary;
+  text-transform: uppercase;
+  text-decoration: none;
+}

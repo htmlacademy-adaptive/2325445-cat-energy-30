@@ -1,0 +1,19 @@
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-color-contrast;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $main-color;
+  border: none;
+  cursor: pointer;
+
+  &--secondary {
+    color: $text-color-primary;
+    background-color: $bg-color-secondary;
+  }
+}

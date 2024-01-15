@@ -1,0 +1,38 @@
+.demo {
+  background-color: $bg-color-secondary;
+}
+
+.demo__title {
+  line-height: 40px;
+  color: $text-color-secondary;
+}
+
+.demo__desc {
+  margin: 0;
+}
+
+.demo__list {
+  margin: 0;
+}
+
+.demo__key {
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: lowercase;
+}
+
+.demo__value {
+  margin: 0;
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: $text-color-secondary;
+  text-transform: uppercase;
+}
+
+.demo__price {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-family: $secondary-font;
+  line-height: 20px;
+}
