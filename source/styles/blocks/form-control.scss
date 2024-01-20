@@ -1,0 +1,44 @@
+.form-control {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 15px;
+  width: fit-content;
+}
+
+.form-control__input {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  border: 1px solid $border-color-secondary;
+  appearance: none;
+}
+
+.form-control__input[type="checkbox"]:checked::before {
+  @include mask(url("../../images/icons/stack.svg#tick"), 26px 26px);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: $main-color;
+}
+
+.form-control__input[type="radio"] {
+  border-radius: 50%;
+}
+
+.form-control__input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  background-color: $main-color;
+  border-radius: 50%;
+}
