@@ -1,3 +1,35 @@
+$socials-link-outline: #666666;
+
 .socials__list {
   @include list-reset;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px 24px;
+  justify-content: center;
+}
+
+.socials__item {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.socials__link {
+  @include mask(unset);
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-color: $socials-link-outline;
+
+  &--vk {
+    mask-image: url("../../images/icons/stack.svg#vk");
+  }
+
+  &--youtube {
+    mask-image: url("../../images/icons/stack.svg#youtube");
+  }
+
+  &--telegram {
+    mask-image: url("../../images/icons/stack.svg#telegram");
+  }
 }

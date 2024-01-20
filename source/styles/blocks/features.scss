@@ -5,9 +5,48 @@
 
 .features__list {
   @include list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.features__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 60px;
+    height: 60px;
+
+    background-color: $main-color;
+    background-size: 30px 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--leaf::before {
+    background-image: url("../../images/icons/stack.svg#leaf");
+  }
+
+  &--water::before {
+    background-image: url("../../images/icons/stack.svg#water");
+  }
+
+  &--cutlery::before {
+    background-image: url("../../images/icons/stack.svg#cutlery");
+  }
+
+  &--scales::before {
+    background-image: url("../../images/icons/stack.svg#scales");
+  }
 }
 
 .features__desc {
   margin: 0;
+  margin-top: 2px;
 }
 

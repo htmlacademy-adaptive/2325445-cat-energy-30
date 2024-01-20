@@ -13,3 +13,10 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin mask($image, $size: contain, $position: center, $repeat: no-repeat) {
+  mask-image: $image;
+  mask-repeat: $repeat;
+  mask-size: $size;
+  mask-position: $position;
+}
