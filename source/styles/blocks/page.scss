@@ -1,5 +1,15 @@
+.page,
 .page__body {
+  height: 100%; // sticky footer
+  min-height: 100%; // sticky footer
+}
+
+.page__body {
+  display: flex; // sticky footer
+  flex-direction: column; // sticky footer
+
   margin: 0;
+
   font-family: $primary-font;
   font-size: 14px;
   line-height: 18px;
