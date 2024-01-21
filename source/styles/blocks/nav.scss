@@ -95,10 +95,10 @@
 }
 
 .nav__item {
-  border-top: 1px solid $border-color-menu;
+  border-top: 1px solid $border-color-extra;
 
   &:last-of-type {
-    border-bottom: 1px solid $border-color-menu;
+    border-bottom: 1px solid $border-color-extra;
   }
 
   @media (min-width: $tablet-width) {
