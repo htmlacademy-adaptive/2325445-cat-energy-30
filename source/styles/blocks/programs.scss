@@ -1,54 +1,138 @@
 $programs-divider: #d9d9d9;
 
+.programs {
+  padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 82px 0 41px;
+  }
+}
+
 .programs__list {
   @include list-reset;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto;
   gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
 }
 
 .programs__item {
-  position: relative;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 20px;
   padding: 24px 20px 18px;
   background-color: $bg-color-secondary;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
-    position: absolute;
+    box-sizing: content-box;
+    grid-area: 1 / 1 / 2 / 2;
     display: block;
     width: 50px;
     height: 50px;
+  }
+
+  &::before {
     border-radius: 50%;
     background-color: $main-color;
   }
 
+  &::after {
+    margin: -10px;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   &--slim::after {
-    content: "";
-    position: absolute;
-    top: 21px;
-    left: 27px;
-    display: block;
-    width: 36px;
-    height: 50px;
     background-image: url("../../images/icons/stack.svg#cat-slim");
+    background-size: 36px 53px;
+    background-position-y: 5px;
   }
 
   &--strong::after {
-    content: "";
-    position: absolute;
-    top: 35px;
-    left: 12px;
-    display: block;
-    width: 67px;
-    height: 28px;
     background-image: url("../../images/icons/stack.svg#cat-strong");
-    background-repeat: no-repeat;
+    background-size: 67px 28px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .programs__item {
+    grid-template-columns: 1fr 200px;
+    column-gap: 53px;
+    padding: 77px 63px 53px 52px;
+
+    &::before,
+    &::after {
+      grid-area: 1 / 2 / 4 / 3;
+      width: 200px;
+      height: 200px;
+      margin-top: 15px;
+    }
+
+    &::after {
+      padding: 35px;
+      margin: -35px;
+    }
+
+    &--slim::after {
+      background-size: 140px 194px;
+      background-position-y: 39px;
+    }
+
+    &--strong::after {
+      background-size: 268px 112px;
+      background-position-y: 94px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs__item {
+    grid-template-columns: 100px 1fr;
+    column-gap: 62px;
+    padding: 47px 61px 55px 52px;
+
+    &::before,
+    &::after {
+      grid-area: 1 / 1 / 2 / 2;
+      width: 100px;
+      height: 100px;
+      margin-top: 0;
+    }
+
+    &::after {
+      padding: 20px;
+      margin: -20px;
+    }
+
+    &--slim::after {
+      background-size: 70px 97px;
+      background-position-y: 14px;
+    }
+
+    &--strong::after {
+      background-size: 134px 56px;
+      background-position: 1px 40px;
+    }
   }
 }
 
 .programs__title {
   margin: 0;
-  margin-left: 70px;
   margin-top: 6px;
   margin-bottom: 29px;
   font-family: $secondary-font;
@@ -57,16 +141,43 @@ $programs-divider: #d9d9d9;
   line-height: 37px;
   color: $text-color-secondary;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 30px;
+    margin-bottom: 73px;
+  }
 }
 
 .programs__desc {
+  grid-column: 1 / -1;
   margin: 0;
   margin-bottom: 15px;
   padding-bottom: 22px;
   border-bottom: 1px solid $programs-divider;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+    margin-bottom: 48px;
+    padding-bottom: 0;
+    color: $text-color-secondary;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+    margin-bottom: 23px;
+  }
 }
 
 .programs__link {
+  grid-column: 1 / -1;
   display: flex;
   flex-wrap: nowrap;
   gap: 17px;
@@ -87,5 +198,16 @@ $programs-divider: #d9d9d9;
     height: 12px;
     background-image: url("../../images/icons/stack.svg#arrow-right");
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+    gap: 25px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
   }
 }
