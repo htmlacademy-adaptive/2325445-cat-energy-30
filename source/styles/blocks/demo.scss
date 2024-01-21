@@ -1,23 +1,75 @@
 .demo {
-  background-color: $bg-color-secondary;
+  padding-top: 25px;
+  padding-bottom: 40px;
+  background-image: linear-gradient($bg-color-secondary, $bg-color-secondary);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 101px;
+    background-position: left 0 bottom 0;
+    background-size: 100% 462px;
+    background-repeat: no-repeat;
+  }
 }
 
 .demo__title {
+  margin-bottom: 40px;
   line-height: 40px;
   color: $text-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+    line-height: 60px;
+  }
 }
 
 .demo__desc {
   margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .demo__list {
+  display: grid;
+  grid-template-columns: repeat(2, 124px);
+  gap: 32px;
   margin: 0;
+  margin-bottom: 20px;
+}
+
+.demo__item {
+  position: relative;
+  margin-bottom: 14px;
+  padding: 13px 10px 17px;
+  text-align: center;
+  border: 1px solid $border-color-secondary;
+  border-radius: 3px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    display: block;
+    width: 87px;
+    height: 2px;
+    background-color: $bg-color-secondary;
+  }
 }
 
 .demo__key {
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  transform: translate(-50%, 50%);
+  max-width: 87px;
   font-size: 12px;
   line-height: 12px;
+  color: $text-color-primary;
   text-transform: lowercase;
 }
 
@@ -30,9 +82,13 @@
   text-transform: uppercase;
 }
 
-.demo__price {
+.demo__total {
   display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
   margin-bottom: 20px;
   font-family: $secondary-font;
   line-height: 20px;
+  text-transform: uppercase;
 }
