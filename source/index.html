@@ -14,56 +14,58 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <div class="header__container container">
-        <a class="header__logo" href="index.html" aria-current="page">
-          <picture>
-            <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-icon-desktop.svg">
-            <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-icon-tablet.svg">
-            <img class="header__logo-icon" src="images/logo-icon-mobile.svg" width="33" height="38" alt="Логотип компании.">
-          </picture>
-          <picture>
-            <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg">
-            <source width="101" height="18" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-text-tablet.svg">
-            <img class="header__logo-text" src="images/logo-text-mobile.svg" width="101" height="18" alt="Кэт Энерджи.">
-          </picture>
-        </a>
-        <nav class="nav">
-          <button class="nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню.</span>
-          </button>
-          <!-- nav__menu--open открывает меню -->
-          <div class="nav__menu">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link nav__link--current" href="index.html" aria-current="page">Главная</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="form.html">Подбор программы</a>
-              </li>
-            </ul>
+      <div class="header__wrapper">
+        <div class="header__container container">
+          <a class="header__logo" href="index.html" aria-current="page">
+            <picture>
+              <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-icon-desktop.svg">
+              <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-icon-tablet.svg">
+              <img class="header__logo-icon" src="images/logo-icon-mobile.svg" width="33" height="38" alt="Логотип компании.">
+            </picture>
+            <picture>
+              <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg">
+              <source width="101" height="18" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-text-tablet.svg">
+              <img class="header__logo-text" src="images/logo-text-mobile.svg" width="101" height="18" alt="Кэт Энерджи.">
+            </picture>
+          </a>
+          <nav class="nav">
+            <button class="nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню.</span>
+            </button>
+            <!-- nav__menu--open открывает меню -->
+            <div class="nav__menu">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link nav__link--current" href="index.html" aria-current="page">Главная</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="catalog.html">Каталог продукции</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="form.html">Подбор программы</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <h1 class="visually-hidden">Интернет-магазин диетического питания для котов "Кэт Энерджи".</h1>
+        <section class="promo">
+          <div class="promo__container container">
+            <h2 class="promo__title section-title">Функциональное питание для котов</h2>
+            <p class="promo__subtitle">Занялся собой? Займись котом!</p>
+            <div class="promo__img">
+              <picture>
+                <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/promo-product-desktop@1x.png 1x, images/promo-product-desktop@2x.png 2x">
+                <source width="709" height="609" type="image/jpg" media="(min-width: 768px)" srcset="images/promo-product-tablet@1x.jpg 1x, images/promo-product-tablet@2x.jpg 2x">
+                <img src="images/promo-product-mobile@1x.png" srcset="images/promo-product-mobile@2x.png 2x" width="280" height="270" alt="Корм для котов Кэт Энерджи Про со вкусом курицы.">
+              </picture>
+            </div>
+            <a class="promo__button button button--primary" href="form.html">Подобрать программу</a>
           </div>
-        </nav>
+        </section>
       </div>
     </header>
     <main class="main-container">
-      <h1 class="visually-hidden">Интернет-магазин диетического питания для котов "Кэт Энерджи".</h1>
-      <section class="promo">
-        <div class="container">
-          <h2 class="promo__title section-title">Функциональное питание для котов</h2>
-          <p class="promo__subtitle">Занялся собой? Займись котом!</p>
-          <div class="promo__img">
-            <picture>
-              <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/promo-product-desktop@1x.png 1x, images/promo-product-desktop@2x.png 2x">
-              <source width="709" height="609" type="image/jpg" media="(min-width: 768px)" srcset="images/promo-product-tablet@1x.jpg 1x, images/promo-product-tablet@2x.jpg 2x">
-              <img src="images/promo-product-mobile@1x.png" srcset="images/promo-product-mobile@2x.png 2x" width="280" height="270" alt="Корм для котов Кэт Энерджи Про со вкусом курицы.">
-            </picture>
-          </div>
-          <a class="promo__button button button--primary" href="form.html">Подобрать программу</a>
-        </div>
-      </section>
       <section class="programs">
         <div class="container">
           <h2 class="visually-hidden">Программы питания.</h2>

@@ -71,6 +71,7 @@
     position: static;
     display: block;
     transform: none;
+    background-color: unset;
   }
 
   &--open {
@@ -91,10 +92,6 @@
     flex-wrap: wrap;
     column-gap: 33px;
   }
-
-  @media (min-width: $desktop-width) {
-    background-color: rgba($main-color, 0.85); // wip
-  }
 }
 
 .nav__item {
@@ -105,6 +102,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    max-width: 170px;
     border: none;
 
     &:last-of-type {
