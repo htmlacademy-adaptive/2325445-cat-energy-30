@@ -31,17 +31,19 @@
           <button class="nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
-          <ul class="nav__list menu-list">
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="index.html">Главная</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link menu-list__link--current" href="form.html" aria-current="page">Подбор программы</a>
-            </li>
-          </ul>
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link nav__link--current" href="index.html" aria-current="page">Главная</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -145,7 +147,7 @@
       <section class="location location--inner-page">
         <div class="location__wrapper">
           <h2 class="visually-hidden">Где нас найти.</h2>
-          <p class="location__title">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="location__title">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <address class="location__address">
             <p>ул. Большая Конюшенная, д. 19/8</p>
             <p>Санкт-Петербург</p>
@@ -155,22 +157,19 @@
           <iframe
           class="location__map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018527820329!2d30.321757256926784!3d59.93871783729141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1705253630885!5m2!1sen!2sru"
-          width="320"
-          height="362"
-          style="border:0;"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="container">
+      <div class="footer__container container">
         <a class="footer__logo" href="index.html">
           <img src="images/footer-logo.svg" width="128" height="24" alt="Логотип компании - Кэт Энерджи.">
         </a>
-        <section class="socials">
+        <section class="footer__socials">
           <h2 class="visually-hidden">Мы в социальных сетях.</h2>
-          <ul class="socials__list">
+          <ul class="socials">
             <li class="socials__item">
               <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">ВКонтакте.</span>
@@ -188,11 +187,14 @@
             </li>
           </ul>
         </section>
-        <section class="made-by">
+        <section class="footer__credits">
           <h2 class="visually-hidden">Авторы сайта.</h2>
-          <a class="made-by__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="made-by__logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="images/academy-logo.svg" width="27" height="34" alt="Логотип HTML Academy.">
+          <a class="footer__credits-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="footer__credits-logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">Логотип HTML Academy.</span>
+            <svg width="27" height="34">
+              <use href="images/icons/stack.svg#academy-logo"></use>
+            </svg>
           </a>
         </section>
       </div>
