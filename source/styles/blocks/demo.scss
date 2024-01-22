@@ -1,12 +1,11 @@
 .demo {
   padding-top: 25px;
   padding-bottom: 40px;
-  background-image: linear-gradient($bg-color-secondary, $bg-color-secondary);
+  background-image: linear-gradient($bg-color-special, $bg-color-special);
 
   @media (min-width: $tablet-width) {
     padding-top: 45px;
     padding-bottom: 101px;
-    background-image: linear-gradient($bg-color-special, $bg-color-special);
     background-position: left 0 bottom 0;
     background-size: 100% 462px;
     background-repeat: no-repeat;
@@ -118,7 +117,7 @@
   line-height: 12px;
   color: $text-color-primary;
   text-transform: lowercase;
-  background-color: $bg-color-secondary;
+  background-color: $bg-color-special;
 
   @media (min-width: $tablet-width) {
     bottom: 0;

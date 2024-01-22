@@ -9,7 +9,7 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr $container-desktop 1fr;
-    grid-template-rows: 95px auto 106px;
+    grid-template-rows: 95px auto 105px;
   }
 }
 
@@ -88,6 +88,7 @@
   @media (min-width: $desktop-width) {
     height: 100%;
     grid-area: 1 / 1 / 4 / 4;
+    background-color: $bg-color-secondary;
     background-image: image-set(url("../../images/map-desktop@1x.jpg") 1x, url("../../images/map-desktop@2x.jpg") 2x);
   }
 }

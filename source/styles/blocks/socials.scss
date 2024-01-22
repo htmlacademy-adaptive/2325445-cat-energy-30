@@ -1,6 +1,6 @@
 $socials-link-outline: #666666;
 
-.socials__list {
+.socials {
   @include list-reset;
   display: grid;
   grid-template-columns: repeat(3, auto);
