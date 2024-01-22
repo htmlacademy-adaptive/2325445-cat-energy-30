@@ -145,10 +145,19 @@
     }
 
     @media (min-width: $desktop-width) {
-      text-decoration: underline;
-      text-decoration-color: inherit;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 12px;
+      text-decoration-color: $text-color-contrast;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav__list--inner {
+    .nav__link {
+      color: $text-color-secondary;
+
+      &--current {
+        text-decoration-color: $main-color;
+      }
     }
   }
 }
