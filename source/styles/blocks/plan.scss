@@ -1,3 +1,8 @@
+$input-border: #e7e7e7;
+$input-border-hover: #cdcdcd;
+$input-border-focus: #444444;
+$input-border-error: #ff8282;
+
 .plan__title {
   color: $text-color-secondary;
 }
@@ -59,11 +64,10 @@
   line-height: 18px;
   color: $text-color-primary;
   text-transform: uppercase;
-  border: 1px solid $border-color-primary;
+  border: 1px solid $input-border;
 
   &--icon {
     padding-right: 42px;
-    border-color: #cdcdcd;
   }
 }
 

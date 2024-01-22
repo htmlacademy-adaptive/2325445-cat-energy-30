@@ -1,5 +1,3 @@
-$footer-divider-color: #d9d9d9;
-
 .footer {
   padding: 40px 0;
   background-color: $bg-color-secondary;
@@ -39,8 +37,8 @@ $footer-divider-color: #d9d9d9;
   flex-shrink: 0;
   padding: 16px 0;
   width: 100%;
-  border-top: 1px solid $footer-divider-color;
-  border-bottom: 1px solid $footer-divider-color;
+  border-top: 1px solid $border-color-secondary;
+  border-bottom: 1px solid $border-color-secondary;
 
   @media (min-width: $tablet-width) {
     margin-left: 40px;

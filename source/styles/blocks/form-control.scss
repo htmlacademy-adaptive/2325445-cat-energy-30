@@ -1,3 +1,6 @@
+$control-border: #cdcdcd;
+$control-border-hover: #bababa;
+
 .form-control {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -11,7 +14,7 @@
   width: 30px;
   height: 30px;
   margin: 0;
-  border: 1px solid $border-color-secondary;
+  border: 1px solid $control-border;
   appearance: none;
 }
 
