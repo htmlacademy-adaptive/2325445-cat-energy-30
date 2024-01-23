@@ -1,19 +1,16 @@
-.title-crossed {
+.title-strikethrough {
   position: relative;
   margin: 0;
   font-family: $secondary-font;
   font-size: 24px;
   font-weight: 400;
   color: $text-color-secondary;
-  // text-wrap: balance;
 
   &::after {
     content: "";
     position: absolute;
     top: 15px;
     left: calc(50% - 50vw);
-    // left: 0;
-    // transform: translateX(-25vw);
     width: 100vw;
     height: 2px;
     z-index: -1;
@@ -30,7 +27,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .title-crossed {
+  .title-strikethrough {
     font-size: 36px;
 
     &::after {
@@ -45,7 +42,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .title-crossed {
+  .title-strikethrough {
     &::after {
       top: 23px;
     }
