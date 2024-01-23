@@ -1,0 +1,54 @@
+.title-crossed {
+  position: relative;
+  margin: 0;
+  font-family: $secondary-font;
+  font-size: 24px;
+  font-weight: 400;
+  color: $text-color-secondary;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: calc(50% - 50vw);
+    width: 100vw;
+    height: 2px;
+    z-index: -1;
+    background-color: $main-color;
+  }
+
+  span {
+    z-index: 1;
+    display: inline-block;
+    margin-left: -20px;
+    padding: 0 20px;
+    background-color: $bg-color-primary;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .title-crossed {
+    font-size: 36px;
+
+    &::after {
+      top: 22px;
+    }
+
+    span {
+      margin-left: 0;
+      padding: 0 40px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title-crossed {
+    &::after {
+      top: 23px;
+    }
+
+    span {
+      margin-left: -40px;
+    }
+  }
+}
