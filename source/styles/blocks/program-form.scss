@@ -1,0 +1,250 @@
+$input-border: #e7e7e7;
+$input-border-hover: #cdcdcd;
+$input-border-focus: #444444;
+$input-border-error: #ff8282;
+
+.program-form {
+  padding: 27px 0 32px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 0 60px;
+  }
+}
+
+.program-form__container {
+  @media (min-width: $tablet-width) {
+    padding: 0 40px;
+  }
+}
+
+.program-form__title {
+  margin-bottom: 37px;
+  color: $text-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+}
+
+.program-form__text {
+  margin: 0;
+  margin-bottom: 39px;
+  max-width: 250px;
+  font-family: $secondary-font;
+  color: $text-color-secondary;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    max-width: 350px;
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.program-form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    gap: 65px;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px 80px;
+  }
+}
+
+.program-form__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.program-form__group--program-type {
+  position: relative;
+  padding: 23px 0 19px;
+  margin-bottom: 3px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 50vw);
+    display: block;
+    width: 100vw;
+    height: 1px;
+    background-color: $border-color-secondary;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.program-form__group--owner,
+.program-form__group--comments,
+.program-form__group--extras {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+  }
+}
+
+.program-form__group-title {
+  padding: 0;
+  max-width: 202px;
+  line-height: 26px;
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    max-width: unset;
+  }
+}
+
+.program-form__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+
+  &--inputs {
+    gap: 14px;
+
+    @media (min-width: $tablet-width) {
+      gap: 20px;
+    }
+  }
+
+  &--radio {
+    gap: 13px;
+  }
+
+  &--checkbox {
+    gap: 12px;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.program-form__group--owner {
+  .program-form__list {
+    padding: 1px 0;
+  }
+}
+
+.program-form__label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 13px;
+  font-family: $secondary-font;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.program-form__input-wrapper {
+  position: relative;
+
+  &::before {
+    @include mask(unset);
+
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+  }
+
+  &--email::before {
+    mask-image: url("../../images/icons/stack.svg#email");
+  }
+
+  &--phone::before {
+    mask-image: url("../../images/icons/stack.svg#phone");
+  }
+}
+
+.program-form__input {
+  padding: 13px 14px 12px;
+  width: 100%;
+  height: 45px;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 18px;
+  color: $text-color-primary;
+  text-transform: uppercase;
+  border: 1px solid $input-border;
+  appearance: textfield;
+
+  &[type="number"] {
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+    }
+  }
+
+  &--icon {
+    padding-right: 42px;
+  }
+
+  &--textarea {
+    display: block;
+    height: 150px;
+    resize: none;
+  }
+}
+
+.program-form__group--comments {
+  .program-form__input--textarea {
+    margin-top: 4px;
+  }
+}
+
+.program-form__form-control {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-form__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.program-form__notice {
+  font-size: 14px;
+  line-height: 16px;
+  color: $text-color-secondary;
+  text-align: center;
+}
