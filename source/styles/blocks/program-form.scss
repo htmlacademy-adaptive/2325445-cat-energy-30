@@ -4,6 +4,7 @@ $input-border-focus: #444444;
 $input-border-error: #ff8282;
 
 .program-form {
+  overflow: hidden;
   padding: 27px 0 32px;
 
   @media (min-width: $tablet-width) {
@@ -108,12 +109,16 @@ $input-border-error: #ff8282;
 
 .program-form__group-title {
   padding: 0;
-  max-width: 202px;
+  width: 100%;
   line-height: 26px;
   margin-bottom: 34px;
 
-  @media (min-width: $tablet-width) {
-    max-width: unset;
+  span {
+    max-width: 225px;
+
+    @media (min-width: $tablet-width) {
+      max-width: unset;
+    }
   }
 }
 
