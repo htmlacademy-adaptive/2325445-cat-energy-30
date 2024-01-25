@@ -4,51 +4,41 @@
   font-family: $secondary-font;
   font-size: 24px;
   font-weight: 400;
+  line-height: 26px;
   color: $text-color-secondary;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: calc(50% - 50vw);
-    width: 100vw;
-    height: 2px;
-    z-index: -1;
-    background-color: $main-color;
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
   }
 
   span {
     z-index: 1;
     display: inline-block;
-    margin-left: -20px;
     padding: 0 20px;
     background-color: $bg-color-primary;
-  }
-}
 
-@media (min-width: $tablet-width) {
-  .title-strikethrough {
-    font-size: 36px;
-
-    &::after {
-      top: 22px;
-    }
-
-    span {
-      margin-left: 0;
+    @media (min-width: $tablet-width) {
       padding: 0 40px;
     }
   }
 }
 
-@media (min-width: $desktop-width) {
-  .title-strikethrough {
-    &::after {
-      top: 23px;
-    }
+.title-strikethrough::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: calc(50% - 50vw);
+  width: 100vw;
+  height: 2px;
+  z-index: -1;
+  background-color: $main-color;
 
-    span {
-      margin-left: -40px;
-    }
+  @media (min-width: $tablet-width) {
+    top: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 23px;
   }
 }

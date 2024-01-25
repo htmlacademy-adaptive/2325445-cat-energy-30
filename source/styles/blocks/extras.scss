@@ -39,6 +39,18 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 79px;
   }
+
+  span {
+    margin-left: -20px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: -40px;
+    }
+  }
 }
 
 .extras__list {
@@ -67,7 +79,6 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    margin-left: 1px; // pixel perfect
     padding: 57px 125px 60px 77px;
     min-height: 200px;
     background-image:
@@ -89,7 +100,6 @@
 .extras__banner::before {
   content: "";
   display: block;
-  margin-left: 2px; // pixel perfect
   width: 78px;
   height: 81px;
   background-image: url("../../images/icons/stack.svg#gift");
