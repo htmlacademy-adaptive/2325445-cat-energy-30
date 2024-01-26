@@ -3,6 +3,9 @@ $slider-control-bg: #ffffff;
 
 .demo-slider {
   position: relative;
+  display: grid;
+  grid-template-columns: calc(var(--control-position) * 100%) auto calc((1 - var(--control-position)) * 100%);
+  width: 280px;
   height: 256px;
 
   @media (min-width: $tablet-width) {
@@ -13,18 +16,23 @@ $slider-control-bg: #ffffff;
 
 .demo-slider__image {
   display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  &--before {
+    object-position: left;
+  }
 
   &--after {
-    display: none; //wip
+    object-position: right;
   }
 }
 
 .demo-slider__control {
-  position: absolute;
-  top: 0;
-  transform: translateX(-50%);
-
+  position: relative;
   display: block;
+  margin: 0 -2px;
   padding: 0;
   width: 4px;
   height: 100%;
@@ -32,7 +40,7 @@ $slider-control-bg: #ffffff;
   background-color: $slider-control-outline;
   border: none;
   border-radius: 2px;
-  cursor: pointer;
+  cursor: ew-resize;
 
   &::before,
   &::after {
@@ -56,5 +64,72 @@ $slider-control-bg: #ffffff;
   &::after {
     @include mask(url("../../images/icons/stack.svg#slider-control"), 24px 18px);
     background-color: $slider-control-outline;
+  }
+
+  &:hover {
+    background-color: $main-color;
+
+    &::before {
+      border-color: $main-color;
+    }
+
+    &::after {
+      background-color: $main-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.demo-slider--no-js {
+  position: relative;
+  height: auto;
+  min-height: 300px;
+  padding-top: 45px;
+  align-items: center;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    display: block;
+    font-family: $secondary-font;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $text-color-secondary;
+
+    @media (min-width: $tablet-width) {
+      font-size: 35px;
+      line-height: 35px;
+    }
+  }
+
+  &::before {
+    content: "до";
+    left: 25%;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    content: "после";
+    right: 25%;
+    transform: translateX(50%);
+  }
+
+  .demo-slider__image {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .demo-slider__control {
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      content: none;
+    }
   }
 }
