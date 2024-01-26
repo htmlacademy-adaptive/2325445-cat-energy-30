@@ -1,3 +1,75 @@
+.nav {
+  &--closed .nav__list {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+  }
+
+  &--opened .nav__list {
+    display: flex;
+  }
+}
+
+.nav--no-js {
+  grid-column: 1 / -1;
+
+  @media (min-width: $tablet-width) {
+    grid-column: auto;
+  }
+
+  .nav__list {
+    position: relative;
+    left: unset;
+    bottom: -14px;
+    transform: none;
+
+    display: flex;
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+      bottom: 0;
+    }
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+}
+
+.nav__list {
+  @include list-reset;
+
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50vw, 100%);
+
+  display: none;
+  flex-direction: column;
+  width: 100vw;
+
+  background-color: $bg-color-primary;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    transform: none;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+    column-gap: 33px;
+
+    width: auto;
+
+    background-color: unset;
+  }
+}
+
 .nav__toggle {
   position: relative;
 
@@ -41,7 +113,7 @@
   }
 }
 
-.nav__toggle:hover {
+.nav--opened .nav__toggle {
   background-size: 0% 2px;
 
   &::before {
@@ -52,45 +124,6 @@
   &::after {
     bottom: 11px;
     transform: rotate(-46.64deg);
-  }
-}
-
-// wip
-
-.nav__menu {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translateY(100%);
-
-  display: none;
-  width: 100%;
-  background-color: $bg-color-primary;
-
-  @media (min-width: $tablet-width) {
-    position: static;
-    display: block;
-    transform: none;
-    background-color: unset;
-  }
-
-  &--open {
-    display: block;
-  }
-}
-
-.nav__list {
-  @include list-reset;
-
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 33px;
   }
 }
 
@@ -109,6 +142,10 @@
       border: none;
     }
   }
+}
+
+.nav--no-js .nav__item:last-of-type {
+  border-bottom: none;
 }
 
 .nav__link {
@@ -151,13 +188,11 @@
 }
 
 @media (min-width: $desktop-width) {
-  .nav__list--inner {
-    .nav__link {
-      color: $text-color-secondary;
+  .nav__list--inner .nav__link {
+    color: $text-color-secondary;
 
-      &--current {
-        text-decoration-color: $main-color;
-      }
+    &--current {
+      text-decoration-color: $main-color;
     }
   }
 }
