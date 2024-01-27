@@ -1,4 +1,10 @@
+$button-bg: $main-color;
+$button-bg-hover: #5eaa2f;
+$secondary-button-bg: #f2f2f2;
+$secondary-button-bg-hover: #ebebeb;
+
 .button {
+  @include basic-transition(background-color, color);
   display: inline-block;
   padding: 10px 22px;
   font-family: $secondary-font;
@@ -8,9 +14,27 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: $main-color;
+  background-color: $button-bg;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: $button-bg-hover;
+  }
+
+  &:active {
+    color: rgba($text-color-contrast, 0.3);
+  }
+
+  &:focus-visible {
+    outline: $outline-primary;
+  }
+
+  &:disabled,
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 14px 26px;
@@ -20,6 +44,14 @@
 
   &--secondary {
     color: $text-color-primary;
-    background-color: $bg-color-secondary;
+    background-color: $secondary-button-bg;
+
+    &:hover {
+      background-color: $secondary-button-bg-hover;
+    }
+
+    &:active {
+      color: $text-color-primary;
+    }
   }
 }
