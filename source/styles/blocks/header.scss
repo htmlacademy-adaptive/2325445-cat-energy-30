@@ -32,13 +32,11 @@
 
 .header__container {
   position: relative;
-
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
   column-gap: 50px;
-
   padding-top: 13px;
   padding-bottom: 14px;
 
@@ -55,14 +53,29 @@
 }
 
 .header__logo {
+  @include basic-transition(opacity);
   flex-shrink: 0;
-
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: center;
   gap: 56px;
-
   text-decoration: none;
+
+  &:hover {
+    @media (min-width: $tablet-width) {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    @media (min-width: $tablet-width) {
+      opacity: 0.6;
+    }
+  }
+
+  &:focus-visible {
+    outline: $outline-primary;
+  }
 
   @media (min-width: $tablet-width) {
     gap: 13px;
@@ -75,5 +88,21 @@
 
 .header__logo-icon,
 .header__logo-text {
+  @include basic-transition(opacity);
   display: block;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+  }
 }
