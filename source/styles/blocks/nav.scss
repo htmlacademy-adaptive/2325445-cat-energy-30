@@ -161,13 +161,13 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    padding: 14px 0 12px;
+    padding: 14px 0 8px;
     font-size: 18px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 16px 0 13px;
+    padding: 16px 0 6px;
     font-size: 20px;
     line-height: 30px;
     color: $text-color-contrast;
@@ -175,24 +175,22 @@
 
   &--current {
     @media (min-width: $tablet-width) {
-      text-decoration: underline;
-      text-decoration-color: $main-color;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 12px;
+      border-bottom: 2px solid $main-color;
     }
 
     @media (min-width: $desktop-width) {
-      text-decoration-color: $text-color-contrast;
+      border-color: currentColor;
     }
   }
 }
 
-@media (min-width: $desktop-width) {
-  .nav__list--inner .nav__link {
+.nav__list--inner .nav__link {
+  @media (min-width: $desktop-width) {
     color: $text-color-secondary;
 
     &--current {
-      text-decoration-color: $main-color;
+      border-color: $main-color;
     }
   }
 }
+
