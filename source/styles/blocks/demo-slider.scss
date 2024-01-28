@@ -1,0 +1,141 @@
+.demo-slider {
+  position: relative;
+  display: grid;
+  grid-template-columns: calc(var(--control-position) * 100%) auto calc((1 - var(--control-position)) * 100%);
+  width: 280px;
+  height: 256px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.demo-slider__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  &--before {
+    object-position: left;
+  }
+
+  &--after {
+    object-position: right;
+  }
+}
+
+.demo-slider__control {
+  @include basic-transition(background-color, opacity);
+  position: relative;
+  display: block;
+  margin: 0 -2px;
+  padding: 0;
+  width: 4px;
+  height: 100%;
+  background-color: $slider-control-outline;
+  border: none;
+  border-radius: 2px;
+  cursor: ew-resize;
+
+  &::before,
+  &::after {
+    @include basic-transition(background-color, border-color);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+
+  &::before {
+    background-color: $slider-control-bg;
+    border: 2px solid $slider-control-outline;
+    border-radius: 50%;
+  }
+
+  &::after {
+    @include mask(url("../../images/icons/stack.svg#slider-control"), 24px 18px);
+    background-color: $slider-control-outline;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $main-color;
+
+    &::before {
+      border-color: $main-color;
+    }
+
+    &::after {
+      background-color: $main-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: $outline-primary;
+
+    &::before {
+      outline: $outline-primary;
+    }
+  }
+}
+
+.demo-slider--no-js {
+  position: relative;
+  height: auto;
+  min-height: 300px;
+  padding-top: 45px;
+  align-items: center;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    display: block;
+    font-family: $secondary-font;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $text-color-secondary;
+
+    @media (min-width: $tablet-width) {
+      font-size: 35px;
+      line-height: 35px;
+    }
+  }
+
+  &::before {
+    content: "до";
+    left: 25%;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    content: "после";
+    right: 25%;
+    transform: translateX(50%);
+  }
+
+  .demo-slider__image {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .demo-slider__control {
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}

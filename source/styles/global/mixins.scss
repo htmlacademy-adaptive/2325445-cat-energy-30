@@ -13,3 +13,25 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin mask($image, $size: contain, $position: center, $repeat: no-repeat) {
+  mask-image: $image;
+  mask-repeat: $repeat;
+  mask-size: $size;
+  mask-position: $position;
+}
+
+@mixin basic-transition($transition-properties...) {
+  $transition: ();
+
+  @each $transition-property in $transition-properties {
+    /* stylelint-disable-next-line function-no-unknown */
+    $transition: append(
+      $transition,
+      ($transition-property 0.2s ease-in),
+      $separator: comma
+    );
+  }
+
+  transition: $transition;
+}

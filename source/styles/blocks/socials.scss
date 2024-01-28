@@ -1,3 +1,47 @@
-.socials__list {
+.socials {
   @include list-reset;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px 24px;
+  justify-content: center;
+}
+
+.socials__item {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.socials__link {
+  @include mask(unset);
+  @include basic-transition(background-color, opacity);
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-color: $socials-link-outline;
+
+  &:hover {
+    background-color: $main-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $main-color;
+  }
+
+  &--vk {
+    mask-image: url("../../images/icons/stack.svg#vk");
+  }
+
+  &--youtube {
+    mask-image: url("../../images/icons/stack.svg#youtube");
+  }
+
+  &--telegram {
+    mask-image: url("../../images/icons/stack.svg#telegram");
+  }
 }

@@ -1,0 +1,11 @@
+.main-container {
+  flex-grow: 1; // sticky footer
+
+  &--inner {
+    border-top: 1px solid $border-color-secondary;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
+  }
+}

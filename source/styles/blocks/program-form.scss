@@ -1,0 +1,367 @@
+.program-form {
+  overflow: hidden;
+  padding: 27px 0 32px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 19px 0 79px;
+  }
+}
+
+.program-form__container {
+  @media (min-width: $tablet-width) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.program-form__title {
+  margin-bottom: 37px;
+  color: $text-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+  }
+}
+
+.program-form__text {
+  margin: 0;
+  margin-bottom: 39px;
+  max-width: 250px;
+  font-family: $secondary-font;
+  color: $text-color-secondary;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    max-width: 350px;
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.program-form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    gap: 65px;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 70px 80px;
+    margin-bottom: 60px;
+  }
+}
+
+.program-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    gap: 76px;
+  }
+
+  &--comments {
+    gap: 38px;
+
+    @media (min-width: $tablet-width) {
+      gap: 87px;
+    }
+
+    @media (min-width: $desktop-width) {
+      gap: 78px;
+    }
+  }
+
+  &--extras {
+    @media (min-width: $tablet-width) {
+      gap: 57px;
+    }
+  }
+
+  &--owner,
+  &--comments,
+  &--extras {
+    @media (min-width: $desktop-width) {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.program-form__group--program-type {
+  position: relative;
+  padding: 23px 0 19px;
+  margin-bottom: 3px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 50vw);
+    display: block;
+    width: 100vw;
+    height: 1px;
+    background-color: $border-color-secondary;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 7px;
+    margin-bottom: 0;
+    padding: 22px 26px 26px;
+    border: 1px solid $border-color-special;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    padding: 24px 27px;
+  }
+}
+
+.program-form__group-title {
+  float: inline-start;
+  padding: 0;
+  width: 100%;
+
+  span {
+    margin-left: -20px;
+    max-width: 225px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: -40px;
+      max-width: unset;
+    }
+  }
+}
+
+.program-form__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+
+  &--inputs {
+    gap: 14px;
+
+    @media (min-width: $tablet-width) {
+      gap: 20px;
+    }
+  }
+
+  &--radio {
+    gap: 13px;
+  }
+
+  &--checkbox {
+    gap: 12px;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px 80px;
+    }
+  }
+}
+
+.program-form__group--owner .program-form__list {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 80px;
+  }
+}
+
+.program-form__label {
+  display: grid;
+  grid-template-columns: fit-content(35%) 1fr;
+  align-items: center;
+  gap: 13px;
+  font-family: $secondary-font;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.program-form__input-wrapper {
+  position: relative;
+
+  &::before {
+    @include mask(unset);
+    @include basic-transition(background-color);
+
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: $input-icon;
+
+    @media (min-width: $tablet-width) {
+      right: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 16px;
+    }
+  }
+
+  &:has(> .program-form__input:focus-visible) {
+    &::before {
+      background-color: $main-color;
+    }
+  }
+
+  &:has(> .program-form__input:user-invalid),
+  &:has(> .program-form__input--error) {
+    &::before {
+      background-color: $input-error;
+    }
+  }
+
+  &--email::before {
+    mask-image: url("../../images/icons/stack.svg#email");
+  }
+
+  &--phone::before {
+    mask-image: url("../../images/icons/stack.svg#phone");
+  }
+}
+
+.program-form__input {
+  @include basic-transition(border-color);
+  padding: 13px 14px 12px;
+  width: 100%;
+  height: 45px;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 18px;
+  color: $text-color-primary;
+  text-transform: uppercase;
+  border: 1px solid $input-border;
+  appearance: textfield;
+
+  &[type="number"] {
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+    }
+  }
+
+  &:hover {
+    border-color: $input-border-hover;
+  }
+
+  &:focus-visible {
+    border-color: $input-border-focus;
+    outline: 1px solid $input-border-focus;
+  }
+
+  &:user-invalid,
+  &--error {
+    border-color: $input-error;
+    outline: 1px solid $input-error;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 19px;
+    height: 52px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--icon {
+    padding-right: 42px;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 46px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 50px;
+    }
+  }
+
+  &--textarea {
+    display: block;
+    height: 150px;
+    resize: none;
+
+    @media (min-width: $tablet-width) {
+      height: 175px;
+    }
+  }
+}
+
+.program-form__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 21px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 80px;
+  }
+}
+
+.program-form__button {
+  width: 100%;
+}
+
+.program-form__notice {
+  font-size: 14px;
+  line-height: 16px;
+  color: $text-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+}
