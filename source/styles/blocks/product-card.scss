@@ -1,13 +1,9 @@
-$card-decor: #d3d3d3;
-$card-top-offset: 81px;
-$more-card-border: #f2f2f2;
-
 .product-card {
   padding: 20px 0 24px;
-  border-bottom: 1px solid $border-color-card;
+  border-bottom: 1px solid $card-border;
 
   &:first-of-type {
-    border-top: 1px solid $border-color-card;
+    border-top: 1px solid $card-border;
   }
 
   @media (min-width: $tablet-width) {
@@ -110,7 +106,7 @@ $more-card-border: #f2f2f2;
 .product-card__link {
   @include basic-transition(opacity);
   display: block;
-  color: $text-color-cards;
+  color: $card-text-color;
   text-decoration: none;
 
   &:hover {

@@ -1,8 +1,3 @@
-$button-bg: $main-color;
-$button-bg-hover: #5eaa2f;
-$secondary-button-bg: #f2f2f2;
-$secondary-button-bg-hover: #ebebeb;
-
 .button {
   @include basic-transition(background-color, color);
   display: inline-block;

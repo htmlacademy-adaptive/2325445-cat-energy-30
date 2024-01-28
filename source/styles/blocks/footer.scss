@@ -29,19 +29,19 @@
   flex-shrink: 0;
   align-self: center;
   height: 24px;
-  fill: #111111;
+  fill: $logo-fill;
 
-  &:hover {
-    fill: #3e3e3e;
+  &:hover,
+  &:focus-visible {
+    fill: $logo-fill-hover;
   }
 
   &:active {
-    fill: #6b6b6b;
+    fill: $logo-fill-active;
   }
 
   &:focus-visible {
     outline: none;
-    fill: #3e3e3e;
   }
 
   img {
@@ -108,5 +108,5 @@
   @include basic-transition(fill);
   display: block;
   height: 34px;
-  fill: #666666;
+  fill: $credits-logo-fill;
 }
