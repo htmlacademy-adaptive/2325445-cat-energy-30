@@ -96,6 +96,7 @@
 .location__map {
   display: block;
   width: 100%;
+  min-width: 320px;
   height: 100%;
   border: none;
 }
