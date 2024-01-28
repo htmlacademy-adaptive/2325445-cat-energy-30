@@ -175,12 +175,14 @@
 }
 
 .programs__link {
+  @include basic-transition(opacity);
   grid-column: 1 / -1;
   display: flex;
   flex-wrap: nowrap;
   gap: 17px;
   align-items: center;
   padding: 4px 0;
+  width: max-content;
   font-family: $secondary-font;
   font-size: 16px;
   font-weight: 400;
@@ -190,12 +192,27 @@
   text-decoration: none;
 
   &::after {
+    @include mask(url("../../images/icons/stack.svg#arrow-right"), 100% 100%, -8px 0);
+    @include basic-transition(mask-position);
+    background-color: currentColor;
     content: "";
     display: block;
-    width: 24px;
+    width: 32px;
     height: 12px;
-    background-image: url("../../images/icons/stack.svg#arrow-right");
-    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    &::after {
+      mask-position: 0 0;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: $outline-primary;
   }
 
   @media (min-width: $tablet-width) {
