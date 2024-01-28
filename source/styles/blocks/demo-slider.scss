@@ -30,13 +30,13 @@ $slider-control-bg: #ffffff;
 }
 
 .demo-slider__control {
+  @include basic-transition(background-color, opacity);
   position: relative;
   display: block;
   margin: 0 -2px;
   padding: 0;
   width: 4px;
   height: 100%;
-
   background-color: $slider-control-outline;
   border: none;
   border-radius: 2px;
@@ -44,12 +44,12 @@ $slider-control-bg: #ffffff;
 
   &::before,
   &::after {
+    @include basic-transition(background-color, border-color);
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     display: block;
     width: 40px;
     height: 40px;
@@ -66,7 +66,8 @@ $slider-control-bg: #ffffff;
     background-color: $slider-control-outline;
   }
 
-  &:hover {
+  &:hover,
+  &:active {
     background-color: $main-color;
 
     &::before {
@@ -80,6 +81,14 @@ $slider-control-bg: #ffffff;
 
   &:active {
     opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: $outline-primary;
+
+    &::before {
+      outline: $outline-primary;
+    }
   }
 }
 
