@@ -16,10 +16,24 @@ $socials-link-outline: #666666;
 
 .socials__link {
   @include mask(unset);
+  @include basic-transition(background-color, opacity);
   display: block;
   width: 28px;
   height: 28px;
   background-color: $socials-link-outline;
+
+  &:hover {
+    background-color: $main-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $main-color;
+  }
 
   &--vk {
     mask-image: url("../../images/icons/stack.svg#vk");

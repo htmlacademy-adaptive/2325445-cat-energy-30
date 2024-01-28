@@ -153,7 +153,10 @@
     <footer class="footer">
       <div class="footer__container container">
         <a class="footer__logo" href="index.html" aria-current="page">
-          <img src="images/footer-logo.svg" width="128" height="24" alt="Логотип компании - Кэт Энерджи.">
+          <span class="visually-hidden">Логотип компании - Кэт Энерджи.</span>
+          <svg width="128" height="24">
+            <use href="images/icons/stack.svg#footer-logo"></use>
+          </svg>
         </a>
         <section class="footer__socials">
           <h2 class="visually-hidden">Мы в социальных сетях.</h2>
@@ -177,10 +180,9 @@
         </section>
         <section class="footer__credits">
           <h2 class="visually-hidden">Авторы сайта.</h2>
-          <a class="footer__credits-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="footer__credits-logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="visually-hidden">Логотип HTML Academy.</span>
-            <svg width="27" height="34">
+          <a class="footer__credits-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <p class="footer__credits-text">HTML Academy</p>
+            <svg class="footer__credits-logo" width="27" height="34">
               <use href="images/icons/stack.svg#academy-logo"></use>
             </svg>
           </a>
