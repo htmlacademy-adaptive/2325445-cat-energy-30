@@ -14,12 +14,39 @@ $control-border-hover: #bababa;
 }
 
 .form-control__input {
+  @include basic-transition(border-color, opacity);
   position: relative;
   width: 30px;
   height: 30px;
   margin: 0;
   border: 1px solid $control-border;
   appearance: none;
+
+  &:hover {
+    border-color: $control-border-hover;
+  }
+
+  &:active {
+    opacity: 0.6;
+
+    ~ .form-control__label {
+      opacity: 0.6;
+    }
+  }
+
+  &:focus-visible {
+    outline: $outline-primary;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+
+    ~ .form-control__label {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     width: 40px;
@@ -65,6 +92,7 @@ $control-border-hover: #bababa;
 }
 
 .form-control__label {
+  @include basic-transition(opacity);
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 18px;

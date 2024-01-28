@@ -1,7 +1,7 @@
 $input-border: #e7e7e7;
 $input-border-hover: #cdcdcd;
 $input-border-focus: #444444;
-$input-border-error: #ff8282;
+$input-error: #ff8282;
 
 .program-form {
   overflow: hidden;
@@ -230,6 +230,7 @@ $input-border-error: #ff8282;
 
   &::before {
     @include mask(unset);
+    @include basic-transition(background-color);
 
     content: "";
     position: absolute;
@@ -250,6 +251,19 @@ $input-border-error: #ff8282;
     }
   }
 
+  &:has(> .program-form__input:focus-visible) {
+    &::before {
+      background-color: $main-color;
+    }
+  }
+
+  &:has(> .program-form__input:user-invalid),
+  &:has(> .program-form__input--error) {
+    &::before {
+      background-color: $input-error;
+    }
+  }
+
   &--email::before {
     mask-image: url("../../images/icons/stack.svg#email");
   }
@@ -260,6 +274,7 @@ $input-border-error: #ff8282;
 }
 
 .program-form__input {
+  @include basic-transition(border-color);
   padding: 13px 14px 12px;
   width: 100%;
   height: 45px;
@@ -278,6 +293,21 @@ $input-border-error: #ff8282;
     &::-webkit-inner-spin-button {
       appearance: none;
     }
+  }
+
+  &:hover {
+    border-color: $input-border-hover;
+  }
+
+  &:focus-visible {
+    border-color: $input-border-focus;
+    outline: 1px solid $input-border-focus;
+  }
+
+  &:user-invalid,
+  &--error {
+    border-color: $input-error;
+    outline: 1px solid $input-error;
   }
 
   @media (min-width: $tablet-width) {
