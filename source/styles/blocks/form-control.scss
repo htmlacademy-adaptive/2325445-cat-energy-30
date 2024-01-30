@@ -36,6 +36,7 @@
   }
 
   &:disabled {
+    border-color: $control-border;
     opacity: 0.3;
     pointer-events: none;
 

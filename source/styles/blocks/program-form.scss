@@ -258,6 +258,13 @@
     }
   }
 
+  &:has(> .program-form__input:disabled),
+  &:has(> .program-form__input--disabled) {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
   &--email::before {
     mask-image: url("../../images/icons/stack.svg#email");
   }
@@ -302,6 +309,13 @@
   &--error {
     border-color: $input-error;
     outline: 1px solid $input-error;
+  }
+
+  &:disabled,
+  &--disabled {
+    border-color: $input-border;
+    opacity: 0.3;
+    pointer-events: none;
   }
 
   @media (min-width: $tablet-width) {
