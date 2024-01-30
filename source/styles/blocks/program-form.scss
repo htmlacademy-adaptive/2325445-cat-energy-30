@@ -226,7 +226,6 @@
   &::before {
     @include mask(unset);
     @include basic-transition(background-color);
-
     content: "";
     position: absolute;
     top: 50%;

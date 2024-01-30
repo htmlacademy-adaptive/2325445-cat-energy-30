@@ -2,14 +2,14 @@
   position: relative;
   background-color: $bg-color-primary;
 
-  &--inner-page {
-    background-color: $bg-color-secondary;
-  }
-
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr $container-desktop 1fr;
     grid-template-rows: 95px auto 105px;
+  }
+
+  &--inner-page {
+    background-color: $bg-color-secondary;
   }
 }
 

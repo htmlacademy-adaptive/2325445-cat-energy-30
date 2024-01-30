@@ -76,11 +76,6 @@
   line-height: 20px;
   text-decoration: none;
 
-  @media (min-width: $tablet-width) {
-    justify-content: end;
-    width: 168px;
-  }
-
   &:hover {
     .footer__credits-logo {
       fill: $main-color;
@@ -97,6 +92,11 @@
     .footer__credits-logo {
       fill: $main-color;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+    width: 168px;
   }
 }
 

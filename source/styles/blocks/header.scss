@@ -61,24 +61,20 @@
   gap: 56px;
   text-decoration: none;
 
-  &:hover {
-    @media (min-width: $tablet-width) {
-      opacity: 0.6;
-    }
-  }
-
-  &:active {
-    @media (min-width: $tablet-width) {
-      opacity: 0.6;
-    }
-  }
-
   &:focus-visible {
     outline: $outline-primary;
   }
 
   @media (min-width: $tablet-width) {
     gap: 13px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
   @media (min-width: $desktop-width) {

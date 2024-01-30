@@ -48,16 +48,13 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 20px;
-
   counter-increment: features;
 
   &::before {
     content: "";
-
     display: block;
     width: 60px;
     height: 60px;
-
     background-color: $main-color;
     background-size: 30px 32px;
     background-repeat: no-repeat;
