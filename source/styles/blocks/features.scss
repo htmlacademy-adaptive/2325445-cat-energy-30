@@ -100,6 +100,23 @@
       color: $features-counter-color;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &::after {
+      grid-area: 1 / 1 / 3 / 3;
+      justify-self: end;
+    }
+
+    &:is(:first-of-type) {
+      &::after {
+        margin-right: 25px;
+      }
+    }
+  }
 }
 
 .features__desc {
