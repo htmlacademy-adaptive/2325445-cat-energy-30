@@ -48,16 +48,13 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 20px;
-
   counter-increment: features;
 
   &::before {
     content: "";
-
     display: block;
     width: 60px;
     height: 60px;
-
     background-color: $main-color;
     background-size: 30px 32px;
     background-repeat: no-repeat;
@@ -103,6 +100,23 @@
       color: $features-counter-color;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &::after {
+      grid-area: 1 / 1 / 3 / 3;
+      justify-self: end;
+    }
+
+    &:is(:first-of-type) {
+      &::after {
+        margin-right: 25px;
+      }
+    }
+  }
 }
 
 .features__desc {
@@ -115,4 +129,3 @@
     grid-area: 2 / 1 / 3 / 3;
   }
 }
-

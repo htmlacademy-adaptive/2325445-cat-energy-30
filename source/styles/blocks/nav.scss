@@ -24,7 +24,6 @@
     left: unset;
     bottom: -14px;
     transform: none;
-
     display: flex;
     width: 100%;
 
@@ -44,33 +43,27 @@
 
 .nav__list {
   @include list-reset;
-
   z-index: 1;
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translate(-50vw, 100%);
-
   display: none;
   flex-direction: column;
   width: 100vw;
-
   background-color: $bg-color-primary;
 
   @media (min-width: $tablet-width) {
     position: static;
     transform: none;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: end;
     align-items: center;
     column-gap: 33px;
-
     padding-top: 6px;
     width: auto;
-
     background-color: unset;
   }
 
@@ -82,12 +75,10 @@
 .nav__toggle {
   @include basic-transition(opacity, transform);
   position: relative;
-
   display: block;
   padding: 0;
   width: 24px;
   height: 24px;
-
   background-color: unset;
   background-image: linear-gradient($nav-toggle-color, $nav-toggle-color);
   background-size: 100% 2px;
@@ -170,7 +161,6 @@
   @include basic-transition(opacity);
   display: block;
   padding: 22px 20px 23px;
-
   font-family: $secondary-font;
   font-size: 20px;
   line-height: 20px;
@@ -226,4 +216,3 @@
     }
   }
 }
-

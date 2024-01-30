@@ -5,7 +5,6 @@
   border-bottom: 1px solid $border-color-primary;
 
   &:first-of-type {
-    margin-bottom: -1px; // pixel perfect
     border-top: 1px solid $border-color-primary;
   }
 
@@ -40,7 +39,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
-  color: $text-color-cards;
+  color: $card-text-color;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
@@ -64,7 +63,6 @@
   line-height: 14px;
 
   @media (min-width: $tablet-width) {
-    margin-right: 2px; // pixel perfect
     margin-bottom: 0;
     line-height: 20px;
     text-align: right;

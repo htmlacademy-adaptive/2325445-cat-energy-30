@@ -226,7 +226,6 @@
   &::before {
     @include mask(unset);
     @include basic-transition(background-color);
-
     content: "";
     position: absolute;
     top: 50%;
@@ -256,6 +255,13 @@
   &:has(> .program-form__input--error) {
     &::before {
       background-color: $input-error;
+    }
+  }
+
+  &:has(> .program-form__input:disabled),
+  &:has(> .program-form__input--disabled) {
+    &::before {
+      opacity: 0.3;
     }
   }
 
@@ -303,6 +309,13 @@
   &--error {
     border-color: $input-error;
     outline: 1px solid $input-error;
+  }
+
+  &:disabled,
+  &--disabled {
+    border-color: $input-border;
+    opacity: 0.3;
+    pointer-events: none;
   }
 
   @media (min-width: $tablet-width) {
