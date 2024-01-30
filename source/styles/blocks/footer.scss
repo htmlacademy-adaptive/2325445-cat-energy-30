@@ -95,7 +95,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    justify-content: end;
+    justify-content: flex-end;
     width: 168px;
   }
 }
